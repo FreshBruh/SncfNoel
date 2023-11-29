@@ -45,6 +45,11 @@ app.get('/referentCNIT', (req, res) => {
 
     const questionDuJour = questions.filter( (obj) => obj.date==new Date().toJSON().substring(0,10) )
 
+    if(questionDuJour.length==0) {
+        res.render('error', { error:'Le temps du jeu est révolu'} );
+        return;
+    }
+
     if(!req.query.authCode || questionDuJour[0].authCode != req.query.authCode){
         res.render('error', { error:`Arrête les carabistouilles`} );
         return;
@@ -60,6 +65,11 @@ app.get('/referentCNIT', (req, res) => {
 
 app.get('/referentTT', (req, res) => {
     const questionDuJour = questions.filter( (obj) => obj.date==new Date().toJSON().substring(0,10) )
+
+    if(questionDuJour.length==0) {
+        res.render('error', { error:'Le temps du jeu est révolu'} );
+        return;
+    }
 
     if(!req.query.authCode || questionDuJour[0].authCode != req.query.authCode){
         res.render('error', { error:`Arrête les carabistouilles`} );
