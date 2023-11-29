@@ -45,6 +45,9 @@ app.get('/referentCNIT', (req, res) => {
 
     const questionDuJour = questions.filter( (obj) => obj.date==new Date().toJSON().substring(0,10) )
 
+    res.send("test");
+    return;
+
     if(!req.query.authCode || questionDuJour[0].authCode != req.query.authCode){
         res.render('error', { error:`Arrête les carabistouilles`} );
         return;
