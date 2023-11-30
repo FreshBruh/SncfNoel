@@ -43,7 +43,7 @@ app.get('/adminFile', (req,res) => {
     console.log(req.query.mdp);
     if(!req.query.mdp || req.query.mdp!='Qlikologie'){
         console.log("mdp faux");
-        res.render('error', {error : `Soit tu sais pas écrire soit t'as rien à faire là`});
+        res.render('error', {error : `Soit tu sais pas ecrire soit t'as rien a faire la`});
         return;
     }
     console.log("mdp ok");
@@ -60,7 +60,7 @@ app.get('/referentCNIT', (req, res) => {
 
     if(questionDuJour.length==0) {
         console.log(questions);
-        res.render('error', { error:'Le temps du jeu est révolu'} );
+        res.render('error', { error:'Le temps du jeu est revolu'} );
         return;
     }
 
@@ -74,7 +74,7 @@ app.get('/referentCNIT', (req, res) => {
     }
     else {
         console.log(questions);
-        res.render('error', { error:'Le temps du jeu est révolu'} );
+        res.render('error', { error:'Le temps du jeu est revolu'} );
     }
 } )
 
@@ -83,7 +83,7 @@ app.get('/referentTT', (req, res) => {
 
     if(questionDuJour.length==0) {
         console.log(questions);
-        res.render('error', { error:'Le temps du jeu est révolu'} );
+        res.render('error', { error:'Le temps du jeu est revolu'} );
         return;
     }
 
@@ -97,7 +97,7 @@ app.get('/referentTT', (req, res) => {
     }
     else {
         console.log(questions);
-        res.render('error', { error:'Le temps du jeu est révolu'} );
+        res.render('error', { error:'Le temps du jeu est revolu'} );
     }
 })
 
@@ -107,7 +107,7 @@ app.get('/codeCNIT', (req, res) => {
 
     if(questionDuJour.length==0) {
         console.log(questions);
-        res.render('error', { error:'Le temps du jeu est révolu'} );
+        res.render('error', { error:'Le temps du jeu est revolu'} );
         return;
     }
 
@@ -134,7 +134,7 @@ app.get('/codeCNIT', (req, res) => {
     }
 
     if(alreadyPlayedDuJour.includes(req.query.player)) {
-        res.render('error', { error:'Tu as déjà reçu un code'} );
+        res.render('error', { error:'Tu as deja reçu un code'} );
         return;
     }
 
@@ -149,7 +149,7 @@ app.get('/codeTT', (req,res) => {
 
     if(questionDuJour.length==0) {
         console.log(questions);
-        res.render('error', { error:'Le temps du jeu est révolu'} );
+        res.render('error', { error:'Le temps du jeu est revolu'} );
         return;
     }
 
@@ -171,7 +171,7 @@ app.get('/codeTT', (req,res) => {
     }
 
     if(alreadyPlayedDuJour.includes(req.query.player)) {
-        res.render('error', { error:'Tu as déjà reçu un code'} );
+        res.render('error', { error:'Tu as deja reçu un code'} );
         return;
     }
 

@@ -34,13 +34,23 @@ body {
   }
 }
 
-.message {
+.message-false {
 	border-radius: 25px;
 	margin-right:25%;
 	margin-left:25%;
 	text-align:center;
 	background-color:#B3000C;
-	color:black;
+	color:white;
+	font-family: noel;
+}
+
+.message-true {
+	border-radius: 25px;
+	margin-right:25%;
+	margin-left:25%;
+	text-align:center;
+	background-color:#0D5901;
+	color:white;
 	font-family: noel;
 }
 
