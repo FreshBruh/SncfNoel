@@ -1,6 +1,6 @@
 [
   {
-    "date": "2023-11-24",
+    "date": "2023-11-29",
     "referent": "Sébastien Fournaise",
     "authCode": "123456789",
     "question1": "Orléans - Rédeau TAO",
@@ -31,9 +31,9 @@
     {
       "date": "2023-12-01",
       "referent": "Sébastien Fournaise",
-      "authCode": "234567891",
-      "question1": "Orléans - Rédeau TAO2",
-      "question2": "TOKTOK2",
+      "authCode": "",
+      "question1": "",
+      "question2": "",
       "questions": [
         {"code": 1234567890, "alreadyFound": false},
         {"code": 2345678901, "alreadyFound": false},

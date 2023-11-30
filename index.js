@@ -23,7 +23,7 @@ const storage = multer.diskStorage({
 const upload = multer({ storage: storage });
 
 
-const questions = require('./questions.json');
+let questions = require('./questions.json');
 const players = require('./players.json');
 const allowedPlayers = require('./allowed-players.json')
 
@@ -33,12 +33,17 @@ app.post('/adminFile', upload.single('file'), (req, res) => {
     if (!uploadedFile) {
       return res.status(400).send('No file uploaded.');
     }
+    questions = require('./questions.json');
     res.render('adminFile' );
   });
   
 
 app.get('/adminFile', (req,res) => {
     res.render('adminFile' );
+})
+
+app.get('/reponseFausse', (req, res) => {
+    res.render('false', { rep:'Votre reponse est fausse'});
 })
 
 app.get('/referentCNIT', (req, res) => {
@@ -86,14 +91,15 @@ app.get('/referentTT', (req, res) => {
 
 app.get('/codeCNIT', (req, res) => {
 
-    const questionDuJour = questions.filter((obj) => obj.date==new Date().toJSON().substring(0,10))
-    const codeRestants = questionDuJour[0].questions.filter((obj) => obj.alreadyFound==false);
-    const alreadyPlayedDuJour = players.filter( (obj) => obj.date==new Date().toJSON().substring(0,10))[0].players;
+    const questionDuJour = questions.filter((obj) => obj.date==new Date().toJSON().substring(0,10));
 
     if(questionDuJour.length==0) {
         res.render('error', { error:'Le temps du jeu est révolu'} );
         return;
     }
+
+    const codeRestants = questionDuJour[0].questions.filter((obj) => obj.alreadyFound==false);
+    const alreadyPlayedDuJour = players.filter( (obj) => obj.date==new Date().toJSON().substring(0,10))[0].players;
 
     if(!req.query.authCode || questionDuJour[0].authCode != req.query.authCode){
         res.render('error', { error:`Arrête les carabistouilles`} );
@@ -104,13 +110,13 @@ app.get('/codeCNIT', (req, res) => {
         res.render('error', { error:`Arrête les carabistouilles dans l'URL, envoie moi au moins ton nom`} );
         return;
     }
-
-    if(allowedPlayers.some(player => player.userid === req.query.player)){
+    
+    if(!allowedPlayers.some(player => player.userid === req.query.player)){
         res.render('error', { error:`Arrête les carabistouilles dans l'URL, je ne connais pas ton id, donc tu n'auras pas de code`} );
     }
 
     if(codeRestants.length==0) {
-        res.render('error', { error:`Il n'y a plus de codes`} );
+        res.render('question2', {code: `Malheureusement il n'y a plus de chocolat aujourd'hui`} )
         return;
     }
 
@@ -121,26 +127,27 @@ app.get('/codeCNIT', (req, res) => {
 
     codeRestants[0].alreadyFound = true;
     alreadyPlayedDuJour.push(req.query.player);
-    res.render('question2', {code: codeRestants[0].code.toString()} )
+    res.render('question2', {code: `Voici ton code a donner au referent : ${codeRestants[0].code.toString()}`} )
 
 } )
 
 app.get('/codeTT', (req,res) => {
     const questionDuJour = questions.filter((obj) => obj.date==new Date().toJSON().substring(0,10))
-    const codeRestants = questionDuJour[0].questions.filter((obj) => obj.alreadyFound==false);
-    const alreadyPlayedDuJour = players.filter( (obj) => obj.date==new Date().toJSON().substring(0,10))[0].players;
 
     if(questionDuJour.length==0) {
         res.render('error', { error:'Le temps du jeu est révolu'} );
         return;
     }
 
+    const codeRestants = questionDuJour[0].questions.filter((obj) => obj.alreadyFound==false);
+    const alreadyPlayedDuJour = players.filter( (obj) => obj.date==new Date().toJSON().substring(0,10))[0].players;
+
     if(!req.query.player) {
         res.render('error', { error:`Arrête les carabistouilles dans l'URL, envoie moi au moins ton nom`} );
         return;
     }
 
-    if(allowedPlayers.some(player => player.userid === req.query.player)){
+    if(!allowedPlayers.some(player => player.userid === req.query.player)){
         res.render('error', { error:`Arrête les carabistouilles dans l'URL, je ne connais pas ton id, donc tu n'auras pas de code`} );
     }
 
@@ -154,7 +161,7 @@ app.get('/codeTT', (req,res) => {
         return;
     }
 
-    res.render('question2', {code: `¨Pas de code parce que tu n'es pas au CNIT, mais bien joué :)`} )
+    res.render('question2', {code: `Pas de chocolat parce que tu n'es pas au CNIT, mais bien joue`} )
 })
 
 app.listen(port, () => {
