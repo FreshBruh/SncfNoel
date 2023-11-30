@@ -175,7 +175,7 @@ app.get('/codeTT', (req,res) => {
         return;
     }
 
-    res.render('question2', {code: `Pas de chocolat parce que tu n'es pas au CNIT, mais bien joue`} )
+    res.render('question2', {code: `En esperant te voir au CNIT la prochaine fois pour que tu puisses gagner des chocolats`} )
 })
 
 app.listen(port, () => {
