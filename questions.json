@@ -7,8 +7,8 @@
     "question2": "TOKTOK",
     "questions": [
         {"code": "Le père noël est une ordure", "alreadyFound": false},
-        {"code": "Le père noël est une ordure", "alreadyFound": false},
-        {"code": "Le père noël est une ordure", "alreadyFound": false}
+        {"code": "Pour Noël, je veux un élan. Ou une licorne. Ou un élan qui se déguise en licorne", "alreadyFound": false},
+        {"code": "À Noël, tous les chemins mènent au ventre.", "alreadyFound": false}
       ]
     },
     {
