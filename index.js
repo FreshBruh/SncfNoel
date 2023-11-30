@@ -59,6 +59,7 @@ app.get('/referentCNIT', (req, res) => {
     const questionDuJour = questions.filter( (obj) => obj.date==new Date().toJSON().substring(0,10) )
 
     if(questionDuJour.length==0) {
+        console.log(questions);
         res.render('error', { error:'Le temps du jeu est révolu'} );
         return;
     }
@@ -72,6 +73,7 @@ app.get('/referentCNIT', (req, res) => {
         res.render('question1', {referent: questionDuJour[0].referent} )
     }
     else {
+        console.log(questions);
         res.render('error', { error:'Le temps du jeu est révolu'} );
     }
 } )
@@ -80,6 +82,7 @@ app.get('/referentTT', (req, res) => {
     const questionDuJour = questions.filter( (obj) => obj.date==new Date().toJSON().substring(0,10) )
 
     if(questionDuJour.length==0) {
+        console.log(questions);
         res.render('error', { error:'Le temps du jeu est révolu'} );
         return;
     }
@@ -93,6 +96,7 @@ app.get('/referentTT', (req, res) => {
         res.render('question1TT', {referent: questionDuJour[0].referent} )
     }
     else {
+        console.log(questions);
         res.render('error', { error:'Le temps du jeu est révolu'} );
     }
 })
@@ -102,6 +106,7 @@ app.get('/codeCNIT', (req, res) => {
     const questionDuJour = questions.filter((obj) => obj.date==new Date().toJSON().substring(0,10));
 
     if(questionDuJour.length==0) {
+        console.log(questions);
         res.render('error', { error:'Le temps du jeu est révolu'} );
         return;
     }
@@ -143,6 +148,7 @@ app.get('/codeTT', (req,res) => {
     const questionDuJour = questions.filter((obj) => obj.date==new Date().toJSON().substring(0,10))
 
     if(questionDuJour.length==0) {
+        console.log(questions);
         res.render('error', { error:'Le temps du jeu est révolu'} );
         return;
     }
