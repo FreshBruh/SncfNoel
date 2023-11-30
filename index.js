@@ -39,11 +39,15 @@ app.post('/adminFile', upload.single('file'), (req, res) => {
   
 
 app.get('/adminFile', (req,res) => {
-    if(!req.query.mdp=='Qlikologie'){
+    console.log("adminFile");
+    console.log(req.query.mdp);
+    if(!req.query.mdp || req.query.mdp!='Qlikologie'){
+        console.log("mdp faux");
         res.render('error', {error : `Soit tu sais pas écrire soit t'as rien à faire là`});
         return;
     }
-    res.render('adminFile' );
+    console.log("mdp ok");
+    res.render('adminFile');
 })
 
 app.get('/reponseFausse', (req, res) => {
