@@ -39,6 +39,10 @@ app.post('/adminFile', upload.single('file'), (req, res) => {
   
 
 app.get('/adminFile', (req,res) => {
+    if(!req.query.mdp=='Qlikologie'){
+        res.render('error', {error : `Soit tu sais pas écrire soit t'as rien à faire là`});
+        return;
+    }
     res.render('adminFile' );
 })
 
