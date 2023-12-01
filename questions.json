@@ -49,12 +49,7 @@
         {"code": "L'amour de l'or", "alreadyFound": false},
         {"code": "L'etoile de Noel", "alreadyFound": false},
         {"code": "Gremlins", "alreadyFound": false},
-        {"code": "L'arnaque de Noel", "alreadyFound": false},
-        {"code": "Noel blanc", "alreadyFound": false},
-        {"code": "Bad Santa", "alreadyFound": false},
-        {"code": "La course au jouet", "alreadyFound": false},
-        {"code": "Les vacances de Noel", "alreadyFound": false},
-        {"code": "Le sapin a les boules", "alreadyFound": false}
+        {"code": "L'arnaque de Noel", "alreadyFound": false}
       ]
     },
     {
@@ -78,12 +73,7 @@
         {"code":"La symphonie des etoiles", "alreadyFound":false},
         {"code":"Les voeux exauces de Noel", "alreadyFound":false},
         {"code":"La magie des flocons", "alreadyFound":false},
-        {"code":"Le rêve de Noel", "alreadyFound":false},
-        {"code":"L'etoile qui guide Noel", "alreadyFound":false},
-        {"code":"La fête des etoiles filantes", "alreadyFound":false},
-        {"code":"La danse des lumieres de Noel", "alreadyFound":false},
-        {"code":"L'eclat des etoiles brillantes", "alreadyFound":false},
-        {"code":"Le secret du Pere Noel", "alreadyFound":false}
+        {"code":"Le rêve de Noel", "alreadyFound":false}
       ]
     },
     {
@@ -107,10 +97,7 @@
         {"code":"La feerie des lumieres", "alreadyFound":false},
         {"code":"Les rires de Noel", "alreadyFound":false},
         {"code":"L'harmonie du reveillon", "alreadyFound":false},
-        {"code":"Les etoiles magiques", "alreadyFound":false},
-        {"code":"Le miracle de decembre", "alreadyFound":false},
-        {"code":"Les voeux eternels", "alreadyFound":false},
-        {"code":"La magie des cadeaux", "alreadyFound":false}
+        {"code":"Les etoiles magiques", "alreadyFound":false}
       ]
     },
     {
@@ -120,7 +107,7 @@
       "question1": "",
       "question2": "",
       "questions": [
-        {"code":"Le sapin a des boules", "alreadyFound":false},
+        {"code":"La magie des cadeaux", "alreadyFound":false},
         {"code":"Les lutins", "alreadyFound":false},
         {"code":"Noel en heritage", "alreadyFound":false},
         {"code":"La course au cadeau", "alreadyFound":false},
