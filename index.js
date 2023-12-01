@@ -165,15 +165,15 @@ app.get('/codeTT', (req,res) => {
         res.render('error', { error:`Arrête les carabistouilles dans l'URL, je ne connais pas ton id, donc tu n'auras pas de code`} );
     }
 
-    if(codeRestants.length==0) {
-        res.render('error', { error:`Il n'y a plus de codes`} );
-        return;
-    }
+    // if(codeRestants.length==0) {
+    //     res.render('error', { error:`Il n'y a plus de codes`} );
+    //     return;
+    // }
 
-    if(alreadyPlayedDuJour.includes(req.query.player)) {
-        res.render('error', { error:'Tu as deja reçu un code'} );
-        return;
-    }
+    // if(alreadyPlayedDuJour.includes(req.query.player)) {
+    //     res.render('error', { error:'Tu as deja reçu un code'} );
+    //     return;
+    // }
 
     res.render('question2', {code: `En esperant te voir au CNIT la prochaine fois pour que tu puisses gagner des chocolats`} )
 })
