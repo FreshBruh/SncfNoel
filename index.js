@@ -137,7 +137,7 @@ app.get('/codeCNIT', (req, res) => {
         res.render('error', { error:'Tu as deja reçu un code'} );
         return;
     }
-    console.log(codeRestants);
+    console.log(`${req.query.player} a trouvé un code`);
     codeRestants[0].alreadyFound = true;
     alreadyPlayedDuJour.push(req.query.player);
     res.render('question2', {code: `Voici ton code a donner au referent : ${codeRestants[0].code.toString()}`} )
