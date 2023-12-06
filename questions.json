@@ -37,7 +37,7 @@
       "questions": [
         {"code": "La vie est belle", "alreadyFound": true},
         {"code": "Maman, j'ai rate l'avion", "alreadyFound": true},
-        {"code": "Le Grinch", "alreadyFound": false},
+        {"code": "Le Grinch", "alreadyFound": true},
         {"code": "Love Actually", "alreadyFound": false},
         {"code": "Miracle sur la 34e rue", "alreadyFound": false},
         {"code": "L'étrange Noël de monsieur Jack", "alreadyFound": false},
