@@ -102,7 +102,7 @@
     },
     {
       "date": "2023-12-07",
-      "referent": "Sebastien Fournaise",
+      "referent": "Matthieu Hoffmann",
       "authCode": "9870123456",
       "question1": "",
       "question2": "",
@@ -126,7 +126,17 @@
         {"code":"Le tourbillon enchante de Noel", "alreadyFound":false},
         {"code":"Les rêves illumines de decembre", "alreadyFound":false},
         {"code":"La magie des etoiles scintillantes", "alreadyFound":false},
-        {"code":"L'etoile qui danse a Noel", "alreadyFound":false}
+        {"code":"L'etoile qui danse a Noel", "alreadyFound":false},
+        {"code": "L'étrange Noël de monsieur Jack", "alreadyFound": false},
+        {"code": "Elfe", "alreadyFound": false},
+        {"code": "Une merveilleuse vie", "alreadyFound": false},
+        {"code": "Le Pole Express", "alreadyFound": false},
+        {"code": "Noel chez les Muppets", "alreadyFound": false},
+        {"code": "Maman, j'ai encore rate l'avion", "alreadyFound": false},
+        {"code": "L'amour de l'or", "alreadyFound": false},
+        {"code": "L'etoile de Noel", "alreadyFound": false},
+        {"code": "Gremlins", "alreadyFound": false},
+        {"code": "L'arnaque de Noel", "alreadyFound": false}
       ]
     },
     {
